@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="admin/tool/cronwatchdog/db" VERSION="20190901" COMMENT="XMLDB file for Moodle admin/tool/crownwatchdog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="tool_cronwatchdog" COMMENT="Contains tasks that have failed">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="taskid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Foreign key to tasks"/>
+                <FIELD NAME="timestamp" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Timestamp of last occurence"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="fk_taskid" TYPE="foreign" FIELDS="taskid" REFTABLE="task_scheduled" REFFIELDS="id"/>
+                <KEY NAME="uq_taskid" TYPE="unique" FIELDS="taskid" COMMENT="Unique taskid"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
