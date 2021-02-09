@@ -1,7 +1,7 @@
 moodle-tool_cronwatchdog
 ========================
 
-[![Build Status](https://travis-ci.com/moodleuulm/moodle-tool_cronwatchdog.svg?branch=master)](https://travis-ci.com/moodleuulm/moodle-tool_cronwatchdog)
+[![Moodle Plugin CI](https://github.com/moodleuulm/moodle-tool_cronwatchdog/workflows/Moodle%20Plugin%20CI/badge.svg?branch=master)](https://github.com/moodleuulm/moodle-tool_cronwatchdog/actions?query=workflow%3A%22Moodle+Plugin+CI%22+branch%3Amaster)
 
 Moodle Plugin (admin tool) which sends messages i.e. to an administrator of the moodle site if cron jobs don't run or fail to execute.
 
